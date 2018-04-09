@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>白板博客</title>
+  
+  <subtitle>http://oblank.com</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://oblank.com/"/>
+  <updated>2018-04-09T10:18:31.537Z</updated>
+  <id>http://oblank.com/</id>
+  
+  <author>
+    <name>oBlank</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>程序猿如何做设计？</title>
+    <link href="http://oblank.com/2018/04/09/coder-designer/"/>
+    <id>http://oblank.com/2018/04/09/coder-designer/</id>
+    <published>2018-04-09T10:17:53.000Z</published>
+    <updated>2018-04-09T10:18:31.537Z</updated>
+    
+    <content type="html"><![CDATA[<p>很久没有更新了</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;很久没有更新了&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="讨论" scheme="http://oblank.com/categories/%E8%AE%A8%E8%AE%BA/"/>
+    
+    
+      <category term="设计" scheme="http://oblank.com/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="程序员" scheme="http://oblank.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>读书笔记一：增长黑客</title>
+    <link href="http://oblank.com/2016/04/11/growth-hancker/"/>
+    <id>http://oblank.com/2016/04/11/growth-hancker/</id>
+    <published>2016-04-11T13:43:53.000Z</published>
+    <updated>2018-04-09T10:16:13.263Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近读了几本运营营销相关的书籍，国内国外的作者都有，书里提到了不少案例，十分精彩，学习了不少新的观点理论，虽然还没读完但总觉得有必要记录一下。</p><h2 id="一些新概念"><a href="#一些新概念" class="headerlink" title="一些新概念"></a>一些新概念</h2><h3 id="MVP：最小化可行产品（Minimum-Viable-Product）"><a href="#MVP：最小化可行产品（Minimum-Viable-Product）" class="headerlink" title="MVP：最小化可行产品（Minimum Viable Product）"></a><code>MVP</code>：最小化可行产品（Minimum Viable Product）</h3><p>Idea is cheap，show me the product。</p><p>MVP要求的是在一个点子变成完整的产品之前，应该借助于现有一些平台或工具做出最基本的产品，然后投放给市场进行检验，经过市场反馈有效后再投入更多资源进行开发。MVP并不意味着主体功能的缺失或是体验上的粗糙。</p><p>书中提到就算是Goole大约也只有30%的想法经市场检验后确认是比较靠谱的，大多数人自认为有用的需求不过是一厢情愿。</p><blockquote><p>可以实践的方式：微信公众号，微信企业号；WrodPress博客系统；原型基础上做的模拟体验；做出效果视频看用户是否喜欢。</p></blockquote><h3 id="PMF：产品市场适配度（Product-Market-Fit）"><a href="#PMF：产品市场适配度（Product-Market-Fit）" class="headerlink" title="PMF：产品市场适配度（Product Market Fit）"></a><code>PMF</code>：产品市场适配度（Product Market Fit）</h3><p>产品是否有用，有多大用，市场说了算。有些产品有用，但可能是很小的一个受众，能找到那个小众群体才算达到PMF，没找到或是找了一群不相干的用户，基本上也是没用，严重甚至的会对产品的运营策略带来误判。</p><h3 id="Growth-Hacker：增长黑客"><a href="#Growth-Hacker：增长黑客" class="headerlink" title="Growth Hacker：增长黑客"></a><code>Growth Hacker</code>：增长黑客</h3><p>增长黑客指的是那些既有技术，又有产品、营销视觉的跨界人才，他们依靠分析产品的各种数据得出增长或是降低的原因，并提出优化方案，使产品、收入进行可持续的增长。</p><p>增长团队一般是工程师、数据科学家、产品、营销组成，是一个综合性团队，有些公司在此之上设立增长官<code>Growth Officer</code>，赋予更大的职责和权限。他们所采用的方法也称之为 Growth Hacking。</p><p>基本上这类人才很少，相关岗位的设置也多是大公司才有专门设置。据称 Facebook 的增长团队由CEO直接领导，作出了卓越贡献。</p><blockquote><p>可用的一些工具：Mixpanel，growingio.com，Google Analytics等类似平台</p></blockquote><p>附一段百科的介绍：</p><blockquote><p>增长黑客是介于技术和市场之间的新型团队角色，主要『依靠技术和数据』的力量来达成各种营销目标，而非传统意义上靠砸钱来获取用户的市场推广角色。他们能从单线思维者时常忽略的角度和难以企及的高度通盘考虑影响产品发展的因素，提出基于产品本身的改造和开发策略，以切实的依据、低廉的成本、可控的风险来达成用户增长、活跃度上升、收入额增加等商业目的。简单来说，就是『低成本』甚至零成本地用“技术”来让产品获得有效增长。</p></blockquote><h3 id="噪声用户-蝗虫用户"><a href="#噪声用户-蝗虫用户" class="headerlink" title="噪声用户 / 蝗虫用户"></a>噪声用户 / 蝗虫用户</h3><p>并不是所有用户是有意义的，比如女性社区里的大量爷们，企业应用里的个人用户，他们不是产品的服务对象，但却大量消耗相关的资源，对初创公司是非常不利的，社区类产品尤其不利。</p><p>有二次元网站为了过滤掉这些用户需要注册用户回答60多道题目，有的需要邀请，有的需要付费才能注册。</p><blockquote><p>可用的手段包括：邀请注册、付费注册、过滤非目标用户、权限控制等。</p></blockquote><h2 id="关于增长"><a href="#关于增长" class="headerlink" title="关于增长"></a>关于增长</h2><p>所谓增长就是在<code>曝光量</code>与<code>转化率</code>两件事上下功夫：SEO、反链、ASO、AD、内容营销、病毒、事件营销等是为了提高曝光量。交互方式、设计美丑、速度、文案等深刻地影响着注册到付费的转化率，不可小视，提高到理论上就是growth hack，细操起来是苦力活，过程与结果往往很有意思。</p><p>一般的产品体验的提升是靠观察与琢磨，growth hack更多靠数据+A/B test说话，比起单个营销事件的而言，GH有可持续操作的特点。<code>当然最基本的还是要讲产品的价值。</code>现在流行的社群概念对冷启动、增长、营销、售后关怀…整个流程都有可能全面的介入。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近读了几本运营营销相关的书籍，国内国外的作者都有，书里提到了不少案例，十分精彩，学习了不少新的观点理论，虽然还没读完但总觉得有必要记录一下。&lt;/p&gt;
+&lt;h2 id=&quot;一些新概念&quot;&gt;&lt;a href=&quot;#一些新概念&quot; class=&quot;headerlink&quot; title=&quot;一些新
+      
+    
+    </summary>
+    
+      <category term="运营" scheme="http://oblank.com/categories/%E8%BF%90%E8%90%A5/"/>
+    
+    
+      <category term="growth hack" scheme="http://oblank.com/tags/growth-hack/"/>
+    
+      <category term="增长黑客" scheme="http://oblank.com/tags/%E5%A2%9E%E9%95%BF%E9%BB%91%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么要重建博客?</title>
+    <link href="http://oblank.com/2016/02/24/why-I-need-another-blog/"/>
+    <id>http://oblank.com/2016/02/24/why-I-need-another-blog/</id>
+    <published>2016-02-24T14:38:58.000Z</published>
+    <updated>2018-04-09T10:09:00.200Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>没什么具体的原因，一是想深入学习MarkDown写作，二是想分享一些学习内容，三是<a href="http://github.com" target="_blank" rel="noopener">GitHub</a>可以免费搭建博客，不再为服务器与长城防火墙发愁。</p><h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>说起来之前的博客大约存在了6年(2008-2014)，好的时候每天都出一篇甚至好几篇，后来微博兴起，博客再也没有以前那么热闹了。再后来服务器过期，数据东挪西腾的，搞乱的有，搞掉的有，也就没什么兴趣再把博客维持下去，索性关掉。</p><h2 id="将来"><a href="#将来" class="headerlink" title="将来"></a>将来</h2><p>现在有了兴趣，不会写的太频繁，会是真正的想写一点东西的时候更新。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;缘由&quot;&gt;&lt;a href=&quot;#缘由&quot; class=&quot;headerlink&quot; title=&quot;缘由&quot;&gt;&lt;/a&gt;缘由&lt;/h2&gt;&lt;p&gt;没什么具体的原因，一是想深入学习MarkDown写作，二是想分享一些学习内容，三是&lt;a href=&quot;http://github.com&quot; t
+      
+    
+    </summary>
+    
+      <category term="思考" scheme="http://oblank.com/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="说明" scheme="http://oblank.com/tags/%E8%AF%B4%E6%98%8E/"/>
+    
+      <category term="博客" scheme="http://oblank.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="why" scheme="http://oblank.com/tags/why/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello world</title>
+    <link href="http://oblank.com/2016/02/24/hello-world/"/>
+    <id>http://oblank.com/2016/02/24/hello-world/</id>
+    <published>2016-02-24T10:25:00.000Z</published>
+    <updated>2018-04-09T10:09:00.200Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>  1, ProductHunt<br>  2, HuntNew</p><h2 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h2><p>  1, 学习<br>  2, 思考<br>  3, 设计<br>  4, 运营</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;tags&quot;&gt;&lt;a href=&quot;#tags&quot; class=&quot;headerlink&quot; title=&quot;tags:&quot;&gt;&lt;/a&gt;tags:&lt;/h2&gt;&lt;p&gt;  1, ProductHunt&lt;br&gt;  2, HuntNew&lt;/p&gt;
+&lt;h2 id=&quot;categories&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="http://oblank.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="思考" scheme="http://oblank.com/categories/%E5%AD%A6%E4%B9%A0/%E6%80%9D%E8%80%83/"/>
+    
+      <category term="设计" scheme="http://oblank.com/categories/%E5%AD%A6%E4%B9%A0/%E6%80%9D%E8%80%83/%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="运营" scheme="http://oblank.com/categories/%E5%AD%A6%E4%B9%A0/%E6%80%9D%E8%80%83/%E8%AE%BE%E8%AE%A1/%E8%BF%90%E8%90%A5/"/>
+    
+    
+      <category term="ProductHunt" scheme="http://oblank.com/tags/ProductHunt/"/>
+    
+      <category term="HuntNew" scheme="http://oblank.com/tags/HuntNew/"/>
+    
+  </entry>
+  
+</feed>
