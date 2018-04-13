@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="记录一些自己入门遇到的问题与解决方法 怎么将navigation传递到子级组件？当需要在子组件中使用navigation导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 withNavigation，后者更优雅。  方法一：引用时传递     1&amp;lt;Component navigation=&amp;#123;this.props.navigation&amp;#1">
+<meta name="description" content="记录一些自己入门遇到的问题与解决方法 怎么将navigation传递到子级组件？当需要在子组件中使用navigation导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 withNavigation，后者更优雅。 ###方法一：引用时传递1&amp;lt;Component navigation=&amp;#123;this.props.navigation&amp;#125;">
 <meta name="keywords" content="设计,程序员">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React Native 入门问题集">
 <meta property="og:url" content="http://oblank.com/2018/04/09/coder-designer/index.html">
 <meta property="og:site_name" content="白板博客">
-<meta property="og:description" content="记录一些自己入门遇到的问题与解决方法 怎么将navigation传递到子级组件？当需要在子组件中使用navigation导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 withNavigation，后者更优雅。  方法一：引用时传递     1&amp;lt;Component navigation=&amp;#123;this.props.navigation&amp;#1">
+<meta property="og:description" content="记录一些自己入门遇到的问题与解决方法 怎么将navigation传递到子级组件？当需要在子组件中使用navigation导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 withNavigation，后者更优雅。 ###方法一：引用时传递1&amp;lt;Component navigation=&amp;#123;this.props.navigation&amp;#125;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-13T03:53:35.598Z">
+<meta property="og:updated_time" content="2018-04-13T04:50:21.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native 入门问题集">
-<meta name="twitter:description" content="记录一些自己入门遇到的问题与解决方法 怎么将navigation传递到子级组件？当需要在子组件中使用navigation导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 withNavigation，后者更优雅。  方法一：引用时传递     1&amp;lt;Component navigation=&amp;#123;this.props.navigation&amp;#1">
+<meta name="twitter:description" content="记录一些自己入门遇到的问题与解决方法 怎么将navigation传递到子级组件？当需要在子组件中使用navigation导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 withNavigation，后者更优雅。 ###方法一：引用时传递1&amp;lt;Component navigation=&amp;#123;this.props.navigation&amp;#125;">
 
 
 
@@ -366,18 +366,12 @@
       
         <p>记录一些自己入门遇到的问题与解决方法</p>
 <h2 id="怎么将navigation传递到子级组件？"><a href="#怎么将navigation传递到子级组件？" class="headerlink" title="怎么将navigation传递到子级组件？"></a>怎么将navigation传递到子级组件？</h2><p>当需要在子组件中使用<code>navigation</code>导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 <code>withNavigation</code>，后者更优雅。</p>
-<ul>
-<li><p>方法一：引用时传递    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Component navigation=&#123;this.props.navigation&#125; ...otherProps /&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法二：使用 <code>withNavigation</code>， <a href="https://reactnavigation.org/docs/connecting-navigation-prop.html" target="_blank" rel="noopener">参见官方文档</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;  </span><br><span class="line">import &#123; Button &#125; from &apos;react-native&apos;;  </span><br><span class="line">import &#123; withNavigation &#125; from &apos;react-navigation&apos;;  </span><br><span class="line"></span><br><span class="line">class Component extends React.Component &#123;  </span><br><span class="line">	render() &#123;  </span><br><span class="line">		return &lt;Button title=&quot;Back&quot; onPress=&#123;() =&gt; &#123; this.props.navigation.goBack() &#125;&#125; /&gt;;</span><br><span class="line">	&#125;  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">// 用withNavigation包一下</span><br><span class="line">export default withNavigation(Component);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<p>###方法一：引用时传递<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Component navigation=&#123;this.props.navigation&#125; ...otherProps /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>###方法二：使用 <code>withNavigation</code>， <a href="https://reactnavigation.org/docs/connecting-navigation-prop.html" target="_blank" rel="noopener">参见官方文档</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;  </span><br><span class="line">import &#123; Button &#125; from &apos;react-native&apos;;  </span><br><span class="line">import &#123; withNavigation &#125; from &apos;react-navigation&apos;;  </span><br><span class="line"></span><br><span class="line">class Component extends React.Component &#123;  </span><br><span class="line">	render() &#123;  </span><br><span class="line">		return &lt;Button title=&quot;Back&quot; onPress=&#123;() =&gt; &#123; this.props.navigation.goBack() &#125;&#125; /&gt;;</span><br><span class="line">	&#125;  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">// 用withNavigation包一下</span><br><span class="line">export default withNavigation(Component);</span><br></pre></td></tr></table></figure></p>
 <p>然后在引入时更直接：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Component ...otherProps /&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="iOS真机、模拟器调试兼容网络问题"><a href="#iOS真机、模拟器调试兼容网络问题" class="headerlink" title="iOS真机、模拟器调试兼容网络问题"></a>iOS真机、模拟器调试兼容网络问题</h2><p>在RN生成的XCode项目里，默认是通过远程方式调试，只要手机、模拟器处于同一网络即可，但我们的手机的网络极有可能会切换网络（譬如上下班、吃饭、上厕所…等等），而这会导到远程调试的应用无法打开，可以兼容处理一下。</p>
+<h2 id="iOS真机、模拟器调试兼容网络问题"><a href="#iOS真机、模拟器调试兼容网络问题" class="headerlink" title="iOS真机、模拟器调试兼容网络问题"></a>iOS真机、模拟器调试兼容网络问题</h2><p>在RN生成的XCode项目里，默认是通过远程方式调试，只要手机、模拟器处于同一网络即可，但我们的手机极有可能会切换网络（譬如上下班、吃饭、上厕所…等等），而这会导到远程调试的应用无法打开，可以兼容处理。</p>
 <p>打开XCode项目，修改 <code>AppDelegate.m</code>，将原有的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@&quot;index&quot; fallbackResource:nil];</span><br></pre></td></tr></table></figure></p>
-<p>修该成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#if TARGET_IPHONE_SIMULATOR</span><br><span class="line">  //remote debug</span><br><span class="line"> jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@&quot;index&quot; fallbackResource:nil];</span><br><span class="line"> #else</span><br><span class="line">  // release</span><br><span class="line"> jsCodeLocation = [[NSBundle  mainBundle] URLForResource:@&quot;main&quot;  withExtension:@&quot;jsbundle&quot;];</span><br><span class="line"> #endif</span><br></pre></td></tr></table></figure></p>
+<p>修改成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#if TARGET_IPHONE_SIMULATOR</span><br><span class="line">  //remote debug</span><br><span class="line"> jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@&quot;index&quot; fallbackResource:nil];</span><br><span class="line"> #else</span><br><span class="line">  // release</span><br><span class="line"> jsCodeLocation = [[NSBundle  mainBundle] URLForResource:@&quot;main&quot;  withExtension:@&quot;jsbundle&quot;];</span><br><span class="line"> #endif</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
