@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://oblank.com/"/>
-  <updated>2018-04-10T02:05:53.503Z</updated>
+  <updated>2018-04-13T03:53:35.598Z</updated>
   <id>http://oblank.com/</id>
   
   <author>
@@ -17,25 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>程序猿如何做设计？</title>
+    <title>React Native 入门问题集</title>
     <link href="http://oblank.com/2018/04/09/coder-designer/"/>
     <id>http://oblank.com/2018/04/09/coder-designer/</id>
     <published>2018-04-09T10:17:53.000Z</published>
-    <updated>2018-04-10T02:05:53.503Z</updated>
+    <updated>2018-04-13T03:53:35.598Z</updated>
     
-    <content type="html"><![CDATA[<p>很久没有更新了，测试。<br>2018-04-10</p>]]></content>
+    <content type="html"><![CDATA[<p>记录一些自己入门遇到的问题与解决方法</p><h2 id="怎么将navigation传递到子级组件？"><a href="#怎么将navigation传递到子级组件？" class="headerlink" title="怎么将navigation传递到子级组件？"></a>怎么将navigation传递到子级组件？</h2><p>当需要在子组件中使用<code>navigation</code>导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 <code>withNavigation</code>，后者更优雅。</p><ul><li><p>方法一：引用时传递    </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Component navigation=&#123;this.props.navigation&#125; ...otherProps /&gt;</span><br></pre></td></tr></table></figure></li><li><p>方法二：使用 <code>withNavigation</code>， <a href="https://reactnavigation.org/docs/connecting-navigation-prop.html" target="_blank" rel="noopener">参见官方文档</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;  </span><br><span class="line">import &#123; Button &#125; from &apos;react-native&apos;;  </span><br><span class="line">import &#123; withNavigation &#125; from &apos;react-navigation&apos;;  </span><br><span class="line"></span><br><span class="line">class Component extends React.Component &#123;  </span><br><span class="line">render() &#123;  </span><br><span class="line">return &lt;Button title=&quot;Back&quot; onPress=&#123;() =&gt; &#123; this.props.navigation.goBack() &#125;&#125; /&gt;;</span><br><span class="line">&#125;  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">// 用withNavigation包一下</span><br><span class="line">export default withNavigation(Component);</span><br></pre></td></tr></table></figure></li></ul><p>然后在引入时更直接：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Component ...otherProps /&gt;</span><br></pre></td></tr></table></figure></p><h2 id="iOS真机、模拟器调试兼容网络问题"><a href="#iOS真机、模拟器调试兼容网络问题" class="headerlink" title="iOS真机、模拟器调试兼容网络问题"></a>iOS真机、模拟器调试兼容网络问题</h2><p>在RN生成的XCode项目里，默认是通过远程方式调试，只要手机、模拟器处于同一网络即可，但我们的手机的网络极有可能会切换网络（譬如上下班、吃饭、上厕所…等等），而这会导到远程调试的应用无法打开，可以兼容处理一下。</p><p>打开XCode项目，修改 <code>AppDelegate.m</code>，将原有的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@&quot;index&quot; fallbackResource:nil];</span><br></pre></td></tr></table></figure></p><p>修该成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#if TARGET_IPHONE_SIMULATOR</span><br><span class="line">  //remote debug</span><br><span class="line"> jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@&quot;index&quot; fallbackResource:nil];</span><br><span class="line"> #else</span><br><span class="line">  // release</span><br><span class="line"> jsCodeLocation = [[NSBundle  mainBundle] URLForResource:@&quot;main&quot;  withExtension:@&quot;jsbundle&quot;];</span><br><span class="line"> #endif</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;很久没有更新了，测试。&lt;br&gt;2018-04-10&lt;/p&gt;
-
+        &lt;p&gt;记录一些自己入门遇到的问题与解决方法&lt;/p&gt;
+&lt;h2 id=&quot;怎么将navigation传递到子级组件？&quot;&gt;&lt;a href=&quot;#怎么将navigation传递到子级组件？&quot; class=&quot;headerlink&quot; title=&quot;怎么将navigation传递到子级组件？&quot;&gt;&lt;
       
     
     </summary>
     
-      <category term="讨论" scheme="http://oblank.com/categories/%E8%AE%A8%E8%AE%BA/"/>
+      <category term="开发" scheme="http://oblank.com/categories/%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="设计" scheme="http://oblank.com/tags/%E8%AE%BE%E8%AE%A1/"/>
