@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="白板博客">
 <meta property="og:description" content="记录一些自己入门遇到的问题与解决方法 怎么将navigation传递到子级组件？当需要在子组件中使用navigation导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 withNavigation，后者更优雅。 方法一：引用时传递1&amp;lt;Component navigation=&amp;#123;this.props.navigation&amp;#125; ..">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-14T09:12:22.037Z">
+<meta property="og:updated_time" content="2018-06-14T09:27:52.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native 入门问题集">
 <meta name="twitter:description" content="记录一些自己入门遇到的问题与解决方法 怎么将navigation传递到子级组件？当需要在子组件中使用navigation导航时，一种方法是直接在引入组件时将 navigation 作为props传递，另一种是使用 withNavigation，后者更优雅。 方法一：引用时传递1&amp;lt;Component navigation=&amp;#123;this.props.navigation&amp;#125; ..">
@@ -386,7 +386,7 @@
 <h2 id="StackNavigator里嵌套了TabNavigator"><a href="#StackNavigator里嵌套了TabNavigator" class="headerlink" title="StackNavigator里嵌套了TabNavigator"></a>StackNavigator里嵌套了TabNavigator</h2><p>如果TabNavigator里的Views是根据程序动态生成的，那边多半面临导航找不到路由的问题</p>
 <p>同时如果组件既在TabNavigator里使用，也有可能直接在StackNavigator里使用，这个时候 <code>navigation</code>指向不同，需要特殊处理才能兼容</p>
 <p>具体方法，参考：<a href="https://github.com/react-navigation/react-navigation/issues/335" target="_blank" rel="noopener">https://github.com/react-navigation/react-navigation/issues/335</a></p>
-<figure class="highlight plain"><figcaption><span>native</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// Community   : CommunityTabs, // 这个方法不能让子级最高层级的 TabBar的情况，譬如按需隐藏 </span><br><span class="line">Community : &#123; screen: (&#123; navigation &#125;) =&gt; &lt;TabsNavigator screenProps=&#123;&#123; navigation &#125;&#125;/&gt; &#125;,</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">// 调用时做一些处理</span><br><span class="line">navigate = (route, payload) =&gt; &#123;</span><br><span class="line">    if (this.props.screenProps) &#123;</span><br><span class="line">        this.props.screenProps.navigation.navigate(route, payload)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        this.props.navigation.navigate(route, payload)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// Community   : CommunityTabs, // 这个方法不能让子级最高层级的 TabBar的情况，譬如按需隐藏 </span><br><span class="line">Community : &#123; screen: (&#123; navigation &#125;) =&gt; &lt;TabsNavigator screenProps=&#123;&#123; navigation &#125;&#125;/&gt; &#125;,</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">// 调用时做一些处理</span><br><span class="line">navigate = (route, payload) =&gt; &#123;</span><br><span class="line">    if (this.props.screenProps) &#123;</span><br><span class="line">        this.props.screenProps.navigation.navigate(route, payload)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        this.props.navigation.navigate(route, payload)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -419,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/09/things-about-nginx/" rel="next" title="用Nginx代理解决一些问题总结">
-                <i class="fa fa-chevron-left"></i> 用Nginx代理解决一些问题总结
+              <a href="/2016/04/11/growth-hancker/" rel="next" title="读书笔记一：增长黑客">
+                <i class="fa fa-chevron-left"></i> 读书笔记一：增长黑客
               </a>
             
           </div>
@@ -429,8 +429,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/14/fabric-install/" rel="prev" title="Hypleder Fabric 体验">
-                Hypleder Fabric 体验 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/09/things-about-nginx/" rel="prev" title="用Nginx代理解决一些问题总结">
+                用Nginx代理解决一些问题总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
