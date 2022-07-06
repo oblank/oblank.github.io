@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://oblank.com/"/>
-  <updated>2019-08-02T02:39:35.145Z</updated>
+  <updated>2022-07-06T13:22:49.522Z</updated>
   <id>https://oblank.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仅79元，修复Airpods Pro导致耳朵过敏的民间配方</title>
+    <link href="https://oblank.com/2022/07/06/airpods-hurt-my-ears/"/>
+    <id>https://oblank.com/2022/07/06/airpods-hurt-my-ears/</id>
+    <published>2022-07-06T13:22:58.000Z</published>
+    <updated>2022-07-06T13:22:49.522Z</updated>
+    
+    <content type="html"><![CDATA[<p>Airpods Pro的体验是真的好，美观、便携，手机电脑自动切换，降噪、空间音频的体验也很不错，逃不过的“真香定律”。</p><p><em>适用于所有硅胶过敏的情况。</em></p><h2 id="耳朵问题"><a href="#耳朵问题" class="headerlink" title="耳朵问题"></a>耳朵问题</h2><p>一开始以为是游泳导致的，诸如进水、环境不卫生之类的，表现为耳朵发炎，伴有液体，且反复发生。</p><p>用了一些滴液，看了专科医生，也仅能维护短暂的时间。停止游泳后，问题依旧，慢慢观察才怀疑上Airpods，知乎上也有很多人大倒苦水，<a href="https://www.zhihu.com/search?type=content&amp;q=airpods%20%E5%8F%91%E7%82%8E" target="_blank" rel="noopener">例如这些</a>。</p><p>网上有些文章或视频会告诉你要注意卫生，经常清洁耳机，在这样的理论指导下我试过了对其全身酒精SPA，开水炖煮耳塞等，没什么卵用，耳机就这样闲置了大半年。</p><p>一度怀疑是因为 <code>Made in Vietnam</code>的质量不过关导致的。</p><h2 id="过敏原因"><a href="#过敏原因" class="headerlink" title="过敏原因"></a>过敏原因</h2><p>后来有意识地搜索了下相关文章，《<a href="https://mp.weixin.qq.com/s/O1mFoSpMs1V-ySUqLMa1hQ" target="_blank" rel="noopener">你正在使用的苹果耳机AirPods Pro，可能是引发耳朵过敏性接触性皮炎的元凶？</a>》这篇文章比较好地解释了发生的原因，以及耳机各部分对过敏的影响，摘录如下：</p><blockquote><p><img src="/images/airpods_pro.png" alt=""><br>测试了患者会接触到到 AirPods Pro 的三个部分，这些部分在佩戴时会与皮肤接触，即硅耳尖、耳机的白色塑料外壳和黑色不锈钢声学网（上图a、b、c）。<br>测试结果（见下图）显示<strong>患者对硅耳尖反应强烈</strong>，对白色塑料外壳反应微弱。这些被认为是当前症状相关的。她对黑色不锈钢声网也有怀疑（+/+）反应。<br><img src="/images/airpods_pro_2.png" alt=""></p></blockquote><h3 id="苹果的官方建议"><a href="#苹果的官方建议" class="headerlink" title="苹果的官方建议"></a>苹果的官方建议</h3><p>苹果在其官网公开了一些<a href="https://support.apple.com/zh-cn/HT211158" target="_blank" rel="noopener">过敏性材料的描述</a>，但那几乎不是常人所能理解和检测的。主要涉及的材料为<code>镍</code>、<code>丙烯酸酯</code>（这是啥玩意儿？）。它同时提醒到：</p><blockquote><p>如果您的皮肤出现<strong>发红、肿胀、发痒</strong>或任何其他刺激反应，建议您咨询医生后再决定要不要继续佩戴 AirPods、EarPods 或 Beats 设备。</p></blockquote><p>从网友的经验来看，对<strong>硅胶耳塞过敏是主要的原因，这意味着换其他品牌的耳机大概率也是会过敏的</strong>，为啥我这么肯定呢，因为我换过！！！！</p><h2 id="独家配方"><a href="#独家配方" class="headerlink" title="独家配方"></a>独家配方</h2><p>知道了原因后，解决的方法也很简单，<strong>换掉硅胶耳尖，隔离开耳机与耳朵的接触</strong>。</p><blockquote><p>难得是什么样的耳塞质量上会超过苹果官方？</p></blockquote><p>经过试验，最终我的Airpods被裹成了木乃伊，经过一天一夜的佩戴，效果却是立杆见影，无任何不适：</p><p><img src="/images/airpods_pro_3" alt=""></p><p>具体采购清单如下，总价79元：</p><table><thead><tr><th>替换品</th><th>商品</th><th>价格</th><th>购买链接</th></tr></thead><tbody><tr><td>耳塞</td><td>绯乐Latex-AR700耳塞</td><td>69到手</td><td><a href="https://m.tb.cn/h.fDo1WNd?tk=8Lpy2psUUuk" target="_blank" rel="noopener">淘宝</a></td></tr><tr><td>-</td><td>弘生透气防过敏无纺布</td><td>9.9</td><td><a href="https://item.m.jd.com/product/31014075035.html?&amp;utm_source=iosapp&amp;utm_medium=appshare&amp;utm_campaign=t_335139774&amp;utm_term=CopyURL&amp;ad_od=share&amp;utm_user=plusmember&amp;gx=RnExlTQKaj3Ry9RB5tx2VGzM" target="_blank" rel="noopener">京东</a></td></tr></tbody></table><p>实际上，我还尝试过其他耳塞+防水胶布（是真薄），还采购了苖膜，纯天然还够薄，测试后再更新。</p><p>苦了我的耳朵！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Airpods Pro的体验是真的好，美观、便携，手机电脑自动切换，降噪、空间音频的体验也很不错，逃不过的“真香定律”。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;适用于所有硅胶过敏的情况。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;耳朵问题&quot;&gt;&lt;a href=&quot;#耳朵问题&quot; class=&quot;heade
+      
+    
+    </summary>
+    
+      <category term="闲话" scheme="https://oblank.com/categories/%E9%97%B2%E8%AF%9D/"/>
+    
+    
+      <category term="苹果" scheme="https://oblank.com/tags/%E8%8B%B9%E6%9E%9C/"/>
+    
+      <category term="困恼" scheme="https://oblank.com/tags/%E5%9B%B0%E6%81%BC/"/>
+    
+      <category term="Airpods" scheme="https://oblank.com/tags/Airpods/"/>
+    
+  </entry>
   
   <entry>
     <title>前公司两份PPT分享</title>
@@ -189,37 +220,6 @@
       <category term="博客" scheme="https://oblank.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="why" scheme="https://oblank.com/tags/why/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>仅79元，修复Airpods Pro导致耳朵过敏的民间配方</title>
-    <link href="https://oblank.com/2016/02/24/airpods-hurt-my-ears/"/>
-    <id>https://oblank.com/2016/02/24/airpods-hurt-my-ears/</id>
-    <published>2016-02-24T14:38:58.000Z</published>
-    <updated>2022-07-06T13:21:42.552Z</updated>
-    
-    <content type="html"><![CDATA[<p>Airpods Pro的体验是真的好，美观、便携，手机电脑自动切换，降噪、空间音频的体验也很不错，逃不过的“真香定律”。</p><p><em>适用于所有硅胶过敏的情况。</em></p><h2 id="耳朵问题"><a href="#耳朵问题" class="headerlink" title="耳朵问题"></a>耳朵问题</h2><p>一开始以为是游泳导致的，诸如进水、环境不卫生之类的，表现为耳朵发炎，伴有液体，且反复发生。</p><p>用了一些滴液，看了专科医生，也仅能维护短暂的时间。停止游泳后，问题依旧，慢慢观察才怀疑上Airpods，知乎上也有很多人大倒苦水，<a href="https://www.zhihu.com/search?type=content&amp;q=airpods%20%E5%8F%91%E7%82%8E" target="_blank" rel="noopener">例如这些</a>。</p><p>网上有些文章或视频会告诉你要注意卫生，经常清洁耳机，在这样的理论指导下我试过了对其全身酒精SPA，开水炖煮耳塞等，没什么卵用，耳机就这样闲置了大半年。</p><p>一度怀疑是因为 <code>Made in Vietnam</code>的质量不过关导致的。</p><h2 id="过敏原因"><a href="#过敏原因" class="headerlink" title="过敏原因"></a>过敏原因</h2><p>后来有意识地搜索了下相关文章，《<a href="https://mp.weixin.qq.com/s/O1mFoSpMs1V-ySUqLMa1hQ" target="_blank" rel="noopener">你正在使用的苹果耳机AirPods Pro，可能是引发耳朵过敏性接触性皮炎的元凶？</a>》这篇文章比较好地解释了发生的原因，以及耳机各部分对过敏的影响，摘录如下：</p><blockquote><p><img src="/images/airpods_pro.png" alt=""><br>测试了患者会接触到到 AirPods Pro 的三个部分，这些部分在佩戴时会与皮肤接触，即硅耳尖、耳机的白色塑料外壳和黑色不锈钢声学网（上图a、b、c）。<br>测试结果（见下图）显示<strong>患者对硅耳尖反应强烈</strong>，对白色塑料外壳反应微弱。这些被认为是当前症状相关的。她对黑色不锈钢声网也有怀疑（+/+）反应。<br><img src="/images/airpods_pro_2.png" alt=""></p></blockquote><h3 id="苹果的官方建议"><a href="#苹果的官方建议" class="headerlink" title="苹果的官方建议"></a>苹果的官方建议</h3><p>苹果在其官网公开了一些<a href="https://support.apple.com/zh-cn/HT211158" target="_blank" rel="noopener">过敏性材料的描述</a>，但那几乎不是常人所能理解和检测的。主要涉及的材料为<code>镍</code>、<code>丙烯酸酯</code>（这是啥玩意儿？）。它同时提醒到：</p><blockquote><p>如果您的皮肤出现<strong>发红、肿胀、发痒</strong>或任何其他刺激反应，建议您咨询医生后再决定要不要继续佩戴 AirPods、EarPods 或 Beats 设备。</p></blockquote><p>从网友的经验来看，对<strong>硅胶耳塞过敏是主要的原因，这意味着换其他品牌的耳机大概率也是会过敏的</strong>，为啥我这么肯定呢，因为我换过！！！！</p><h2 id="独家配方"><a href="#独家配方" class="headerlink" title="独家配方"></a>独家配方</h2><p>知道了原因后，解决的方法也很简单，<strong>换掉硅胶耳尖，隔离开耳机与耳朵的接触</strong>。</p><blockquote><p>难得是什么样的耳塞质量上会超过苹果官方？</p></blockquote><p>经过试验，最终我的Airpods被裹成了木乃伊，经过一天一夜的佩戴，效果却是立杆见影，无任何不适：</p><p><img src="/images/airpods_pro_3" alt=""></p><p>具体采购清单如下，总价79元：</p><table><thead><tr><th>替换品</th><th>商品</th><th>价格</th><th>购买链接</th></tr></thead><tbody><tr><td>耳塞</td><td>绯乐Latex-AR700耳塞</td><td>69到手</td><td><a href="https://m.tb.cn/h.fDo1WNd?tk=8Lpy2psUUuk" target="_blank" rel="noopener">淘宝</a></td></tr><tr><td>-</td><td>弘生透气防过敏无纺布</td><td>9.9</td><td><a href="https://item.m.jd.com/product/31014075035.html?&amp;utm_source=iosapp&amp;utm_medium=appshare&amp;utm_campaign=t_335139774&amp;utm_term=CopyURL&amp;ad_od=share&amp;utm_user=plusmember&amp;gx=RnExlTQKaj3Ry9RB5tx2VGzM" target="_blank" rel="noopener">京东</a></td></tr></tbody></table><p>实际上，我还尝试过其他耳塞+防水胶布（是真薄），还采购了苖膜，纯天然还够薄，测试后再更新。</p><p>苦了我的耳朵！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Airpods Pro的体验是真的好，美观、便携，手机电脑自动切换，降噪、空间音频的体验也很不错，逃不过的“真香定律”。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;适用于所有硅胶过敏的情况。&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;耳朵问题&quot;&gt;&lt;a href=&quot;#耳朵问题&quot; class=&quot;heade
-      
-    
-    </summary>
-    
-      <category term="闲话" scheme="https://oblank.com/categories/%E9%97%B2%E8%AF%9D/"/>
-    
-    
-      <category term="苹果" scheme="https://oblank.com/tags/%E8%8B%B9%E6%9E%9C/"/>
-    
-      <category term="困恼" scheme="https://oblank.com/tags/%E5%9B%B0%E6%81%BC/"/>
-    
-      <category term="Airpods" scheme="https://oblank.com/tags/Airpods/"/>
     
   </entry>
   
