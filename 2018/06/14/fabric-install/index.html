@@ -1,38 +1,306 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hypleder Fabric 体验 | 白板博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="推荐选用云服务器，按流量付费，使用后及时销毁 注意选择香港区域的服务器，保证网络的联通，避免额外工作，这算是小小的经验吧，我这里选择的是腾讯云香港服务器（4核8G）。  国内服务器可以使用ProxyChain4配合代理来无障碍安装软件  注意服务器版本选择，因为要用到Docker，而根据经验CentOS最好使用7+的版本，我们这里选择的是7.4 根据文档来看，在Windows、Mac环境下都会多做">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hypleder Fabric 体验">
+<meta property="og:url" content="https://oblank.com/2018/06/14/fabric-install/index.html">
+<meta property="og:site_name" content="白板博客">
+<meta property="og:description" content="推荐选用云服务器，按流量付费，使用后及时销毁 注意选择香港区域的服务器，保证网络的联通，避免额外工作，这算是小小的经验吧，我这里选择的是腾讯云香港服务器（4核8G）。  国内服务器可以使用ProxyChain4配合代理来无障碍安装软件  注意服务器版本选择，因为要用到Docker，而根据经验CentOS最好使用7+的版本，我们这里选择的是7.4 根据文档来看，在Windows、Mac环境下都会多做">
+<meta property="og:locale">
+<meta property="article:published_time" content="2018-06-14T09:20:53.000Z">
+<meta property="article:modified_time" content="2019-08-02T02:39:35.144Z">
+<meta property="article:author" content="oBlank">
+<meta property="article:tag" content="fabric">
+<meta property="article:tag" content="blockchain">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="白板博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">白板博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://oblank.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-fabric-install" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/14/fabric-install/" class="article-date">
+  <time datetime="2018-06-14T09:20:53.000Z" itemprop="datePublished">2018-06-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hypleder Fabric 体验
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>推荐选用云服务器，按流量付费，使用后及时销毁</p>
+<p>注意选择香港区域的服务器，保证网络的联通，避免额外工作，这算是小小的经验吧，我这里选择的是腾讯云香港服务器（4核8G）。</p>
+<blockquote>
+<p>国内服务器可以使用ProxyChain4配合代理来无障碍安装软件</p>
+</blockquote>
+<p>注意服务器版本选择，因为要用到Docker，而根据经验CentOS最好使用7+的版本，我们这里选择的是7.4</p>
+<p><em>根据文档来看，在Windows、Mac环境下都会多做一些额外工作，建议使用CentOS或Ubuntu这样的系统。</em></p>
+<p>我所用系统内核：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Linux VM_***_centos 3.10.0-693.el7.x86_64</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>按官方文档安装系统环境</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="http://hyperledger-fabric.readthedocs.io/en/latest/prereqs.html">http://hyperledger-fabric.readthedocs.io/en/latest/prereqs.html</a></p>
+<h4 id="具体要求如下："><a href="#具体要求如下：" class="headerlink" title="具体要求如下："></a>具体要求如下：</h4><ul>
+<li>Docker version 17.06.2-ce or greater.</li>
+<li>Docker Compose version 1.14.0 or greater.</li>
+<li>Go version 1.10.x is required.</li>
+<li>Node.js - version 8.9.x or greater，9.x is not supported at this time.</li>
+</ul>
+<h4 id="安装DockerCE社区版"><a href="#安装DockerCE社区版" class="headerlink" title="安装DockerCE社区版"></a>安装DockerCE社区版</h4><p>参考官方文档 <a target="_blank" rel="noopener" href="https://docs.docker.com/install/linux/docker-ce/centos/">https://docs.docker.com/install/linux/docker-ce/centos/</a></p>
+<p>确认Docker正常：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker --version</span><br><span class="line">Docker version 18.05.0-ce, build f150324</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装Docker-compose"><a href="#安装Docker-compose" class="headerlink" title="安装Docker-compose"></a>安装Docker-compose</h4><p>参考官方文档：<a target="_blank" rel="noopener" href="https://docs.docker.com/compose/install/#install-compose">https://docs.docker.com/compose/install/#install-compose</a></p>
+<p>确认Docker-compose正常：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker-compose --version</span><br><span class="line">docker-compose version 1.21.2, build a133471</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装-Go"><a href="#安装-Go" class="headerlink" title="安装 Go"></a>安装 Go</h4><p>Fabric是由Go开发的，智能合约Chaincode也是Go实现的</p>
+<p>参考文档：<a target="_blank" rel="noopener" href="https://golang.org/doc/install?download=go1.10.2.linux-amd64.tar.gz">https://golang.org/doc/install?download=go1.10.2.linux-amd64.tar.gz</a></p>
+<p>确定Go正常：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> version</span><br><span class="line"><span class="keyword">go</span> version go1<span class="number">.10</span><span class="number">.2</span> linux/amd64</span><br><span class="line"></span><br><span class="line"># test code</span><br><span class="line"><span class="keyword">go</span> run hello.<span class="keyword">go</span> </span><br><span class="line">hello, world</span><br></pre></td></tr></table></figure>
+
+<h4 id="Node-js-安装"><a href="#Node-js-安装" class="headerlink" title="Node.js 安装"></a>Node.js 安装</h4><p>这里使用NVM进行多版本管理</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://github.com/creationix/nvm/blob/master/README.md">https://github.com/creationix/nvm/blob/master/README.md</a></p>
+<p>确认安装正常：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nvm install 8.9.4</span><br><span class="line">nvm use v8.9.4</span><br><span class="line"></span><br><span class="line">npm -v</span><br><span class="line">5.6.0</span><br></pre></td></tr></table></figure>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+<h3 id="按文档安装Fabric"><a href="#按文档安装Fabric" class="headerlink" title="按文档安装Fabric"></a>按文档安装Fabric</h3><p><a target="_blank" rel="noopener" href="http://hyperledger-fabric.readthedocs.io/en/latest/install.html">http://hyperledger-fabric.readthedocs.io/en/latest/install.html</a></p>
+<p>执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 如果系统没有GIT则先安装GIT</span><br><span class="line">sudo yum install git -y</span><br><span class="line"></span><br><span class="line"># 安装 Fabric</span><br><span class="line">curl -sSL https://goo.gl/6wtTN5 | bash -s 1.1.0</span><br></pre></td></tr></table></figure>
 
-{% block page_class %}page-post-detail{% endblock %}
+<p>没问题的话用<code>docker images</code>命令会看下列结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># docker images</span></span><br><span class="line"></span><br><span class="line">REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">hello-world                    latest              e38bc07ac18e        6 weeks ago         1.85kB</span><br><span class="line">hyperledger/fabric-ca          latest              72617b4fa9b4        2 months ago        299MB</span><br><span class="line">hyperledger/fabric-ca          x86_64-1.1.0        72617b4fa9b4        2 months ago        299MB</span><br><span class="line">hyperledger/fabric-tools       latest              b7bfddf508bc        2 months ago        1.46GB</span><br><span class="line">hyperledger/fabric-tools       x86_64-1.1.0        b7bfddf508bc        2 months ago        1.46GB</span><br><span class="line">hyperledger/fabric-orderer     latest              ce0c810df36a        2 months ago        180MB</span><br><span class="line">hyperledger/fabric-orderer     x86_64-1.1.0        ce0c810df36a        2 months ago        180MB</span><br><span class="line">hyperledger/fabric-peer        latest              b023f9be0771        2 months ago        187MB</span><br><span class="line">hyperledger/fabric-peer        x86_64-1.1.0        b023f9be0771        2 months ago        187MB</span><br><span class="line">hyperledger/fabric-javaenv     latest              82098abb1a17        2 months ago        1.52GB</span><br><span class="line">hyperledger/fabric-javaenv     x86_64-1.1.0        82098abb1a17        2 months ago        1.52GB</span><br><span class="line">hyperledger/fabric-ccenv       latest              c8b4909d8d46        2 months ago        1.39GB</span><br><span class="line">hyperledger/fabric-ccenv       x86_64-1.1.0        c8b4909d8d46        2 months ago        1.39GB</span><br><span class="line">hyperledger/fabric-zookeeper   latest              92cbb952b6f8        3 months ago        1.39GB</span><br><span class="line">hyperledger/fabric-zookeeper   x86_64-0.4.6        92cbb952b6f8        3 months ago        1.39GB</span><br><span class="line">hyperledger/fabric-kafka       latest              554c591b86a8        3 months ago        1.4GB</span><br><span class="line">hyperledger/fabric-kafka       x86_64-0.4.6        554c591b86a8        3 months ago        1.4GB</span><br><span class="line">hyperledger/fabric-couchdb     latest              7e73c828fc5b        3 months ago        1.56GB</span><br><span class="line">hyperledger/fabric-couchdb     x86_64-0.4.6        7e73c828fc5b        3 months ago        1.56GB</span><br></pre></td></tr></table></figure>
 
+<p>添加PATH环境变理：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 具体路径以你实际情况为准</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/root/go/src/fabric-samples/bin</span><br></pre></td></tr></table></figure>
 
-{% block content %}
+<h4 id="运行第一个测试网络"><a href="#运行第一个测试网络" class="headerlink" title="运行第一个测试网络"></a>运行第一个测试网络</h4><p>参考：<a target="_blank" rel="noopener" href="http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html">http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html</a></p>
+<p>在<code>fabric-samples/first-network</code>目录下执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">./byfn.sh generate</span><br><span class="line">./byfn.sh up</span><br><span class="line"></span><br><span class="line"><span class="comment"># 直到出现下面的提示</span></span><br><span class="line">========= All GOOD, BYFN execution completed =========== </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> _____   _   _   ____   </span><br><span class="line">| ____| | \ | | |  _ \  </span><br><span class="line">|  _|   |  \| | | | | | </span><br><span class="line">| |___  | |\  | | |_| | </span><br><span class="line">|_____| |_| \_| |____/  </span><br></pre></td></tr></table></figure>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+<p>这个时候再使用使用<code>docker ps</code>，会出现如下结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># docker ps</span></span><br><span class="line">CONTAINER ID        IMAGE                                                                                                  COMMAND                  CREATED             STATUS              PORTS                                              NAMES</span><br><span class="line">61be9101c099        dev-peer1.org2.example.com-mycc-1.0-26c2ef32838554aac4f7ad6f100aca865e87959c9a126e86d764c8d01f8346ab   <span class="string">&quot;chaincode -peer.add…&quot;</span>   3 minutes ago       Up 3 minutes                                                           dev-peer1.org2.example.com-mycc-1.0</span><br><span class="line">eda8b0fd85ff        dev-peer0.org1.example.com-mycc-1.0-384f11f484b9302df90b453200cfb25174305fce8f53f4e94d45ee3b6cab0ce9   <span class="string">&quot;chaincode -peer.add…&quot;</span>   3 minutes ago       Up 3 minutes                                                           dev-peer0.org1.example.com-mycc-1.0</span><br><span class="line">6107fb4406fc        dev-peer0.org2.example.com-mycc-1.0-15b571b3ce849066b7ec74497da3b27e54e0df1345daff3951b94245ce09c42b   <span class="string">&quot;chaincode -peer.add…&quot;</span>   4 minutes ago       Up 4 minutes                                                           dev-peer0.org2.example.com-mycc-1.0</span><br><span class="line">b8204bfc0734        hyperledger/fabric-tools:latest                                                                        <span class="string">&quot;/bin/bash&quot;</span>              4 minutes ago       Up 4 minutes                                                           cli</span><br><span class="line">83ff712ca3bd        hyperledger/fabric-peer:latest                                                                         <span class="string">&quot;peer node start&quot;</span>        4 minutes ago       Up 4 minutes        0.0.0.0:8051-&gt;7051/tcp, 0.0.0.0:8053-&gt;7053/tcp     peer1.org1.example.com</span><br><span class="line">677a3fc1c6c7        hyperledger/fabric-peer:latest                                                                         <span class="string">&quot;peer node start&quot;</span>        4 minutes ago       Up 4 minutes        0.0.0.0:7051-&gt;7051/tcp, 0.0.0.0:7053-&gt;7053/tcp     peer0.org1.example.com</span><br><span class="line">193de4b51d5a        hyperledger/fabric-peer:latest                                                                         <span class="string">&quot;peer node start&quot;</span>        4 minutes ago       Up 4 minutes        0.0.0.0:9051-&gt;7051/tcp, 0.0.0.0:9053-&gt;7053/tcp     peer0.org2.example.com</span><br><span class="line">ebafff254a5b        hyperledger/fabric-orderer:latest                                                                      <span class="string">&quot;orderer&quot;</span>                4 minutes ago       Up 4 minutes        0.0.0.0:7050-&gt;7050/tcp                             orderer.example.com</span><br><span class="line">ebe3b1c8f9e8        hyperledger/fabric-peer:latest                                                                         <span class="string">&quot;peer node start&quot;</span>        4 minutes ago       Up 4 minutes        0.0.0.0:10051-&gt;7051/tcp, 0.0.0.0:10053-&gt;7053/tcp   peer1.org2.example.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<p>简洁模式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># docker ps --format &quot;&#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Names&#125;&#125;&quot;</span></span><br><span class="line"></span><br><span class="line">61be9101c099    dev-peer1.org2.example.com-mycc-1.0</span><br><span class="line">eda8b0fd85ff    dev-peer0.org1.example.com-mycc-1.0</span><br><span class="line">6107fb4406fc    dev-peer0.org2.example.com-mycc-1.0</span><br><span class="line">b8204bfc0734    cli</span><br><span class="line">83ff712ca3bd    peer1.org1.example.com</span><br><span class="line">677a3fc1c6c7    peer0.org1.example.com</span><br><span class="line">193de4b51d5a    peer0.org2.example.com</span><br><span class="line">ebafff254a5b    orderer.example.com</span><br><span class="line">ebe3b1c8f9e8    peer1.org2.example.com</span><br></pre></td></tr></table></figure>
+
+<p>这样就模拟了一个简单的区块链网络，它有1个排序机构（order org），2个节点组织（peer org）每个组织有2个节点（peer）。</p>
+<p>上面的组织机构定义在<code>configtx.yaml</code>文件中，而各个容器的拓扑关系定义在<code>crypto-config.yaml</code>文件中，使用 <code>./byfn.sh down</code> 可以关闭这个网络。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://oblank.com/2018/06/14/fabric-install/" data-id="clmh8oaa40008j6dn02fcbvw3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fabric/" rel="tag">fabric</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/10/keynotes-gather/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          前公司两份PPT分享
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/09/react-native-questions/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">React Native 入门问题集</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%80%9D%E8%80%83/">思考</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%80%9D%E8%80%83/%E8%AE%BE%E8%AE%A1/">设计</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%80%9D%E8%80%83/%E8%AE%BE%E8%AE%A1/%E8%BF%90%E8%90%A5/">运营</a></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%9D%E8%80%83/">思考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%90%E8%90%A5/">运营</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%97%B2%E8%AF%9D/">闲话</a></li></ul>
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Airpods/" rel="tag">Airpods</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HuntNew/" rel="tag">HuntNew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/KeyNote/" rel="tag">KeyNote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PDF/" rel="tag">PDF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ProductHunt/" rel="tag">ProductHunt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/" rel="tag">ReactNative</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fabric/" rel="tag">fabric</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/growth-hack/" rel="tag">growth hack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/why/" rel="tag">why</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%89%E6%98%9F%E5%A0%86/" rel="tag">三星堆</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%B0%E6%81%BC/" rel="tag">困恼</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A2%9E%E9%95%BF%E9%BB%91%E5%AE%A2/" rel="tag">增长黑客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/" rel="tag">程序员</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%80%83%E5%8F%A4/" rel="tag">考古</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%B9%E6%9E%9C/" rel="tag">苹果</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%B4%E6%98%8E/" rel="tag">说明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a></li></ul>
+    </div>
+  </div>
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Airpods/" style="font-size: 10px;">Airpods</a> <a href="/tags/HuntNew/" style="font-size: 10px;">HuntNew</a> <a href="/tags/KeyNote/" style="font-size: 10px;">KeyNote</a> <a href="/tags/PDF/" style="font-size: 10px;">PDF</a> <a href="/tags/ProductHunt/" style="font-size: 10px;">ProductHunt</a> <a href="/tags/ReactNative/" style="font-size: 10px;">ReactNative</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/fabric/" style="font-size: 10px;">fabric</a> <a href="/tags/growth-hack/" style="font-size: 10px;">growth hack</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/why/" style="font-size: 10px;">why</a> <a href="/tags/%E4%B8%89%E6%98%9F%E5%A0%86/" style="font-size: 10px;">三星堆</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%9B%B0%E6%81%BC/" style="font-size: 10px;">困恼</a> <a href="/tags/%E5%A2%9E%E9%95%BF%E9%BB%91%E5%AE%A2/" style="font-size: 10px;">增长黑客</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/" style="font-size: 10px;">程序员</a> <a href="/tags/%E8%80%83%E5%8F%A4/" style="font-size: 10px;">考古</a> <a href="/tags/%E8%8B%B9%E6%9E%9C/" style="font-size: 10px;">苹果</a> <a href="/tags/%E8%AF%B4%E6%98%8E/" style="font-size: 10px;">说明</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 10px;">运维</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/09/11/san-xing-dui/">奇葩三星堆</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/06/airpods-hurt-my-ears/">仅79元，修复Airpods Pro导致耳朵过敏的民间配方</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/10/keynotes-gather/">前公司两份PPT分享</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/14/fabric-install/">Hypleder Fabric 体验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/09/react-native-questions/">React Native 入门问题集</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 oBlank<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
